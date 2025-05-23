@@ -10,17 +10,19 @@ const roboto = Roboto({
 export const metadata = {
   title: "Teste Cogna",
   description: "Teste Cogna - 2025",
-  keywords: ['Next.js', 'React', 'JavaScript'],
-  publisher: 'Cogna',
-  creator: 'André Chiquito'
+  keywords: ["Next.js", "React", "JavaScript"],
+  publisher: "Cogna",
+  creator: "André Chiquito",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${roboto.variable} ${roboto.variable} antialiased`}>
+      <body
+        className={`${roboto.variable} ${roboto.variable} antialiased min-h-screen flex flex-col`}
+      >
         <Header />
-        <div className="container mx-auto">{children}</div>
+        <main className="flex-1 container mx-auto">{children}</main>
         <Footer />
       </body>
     </html>

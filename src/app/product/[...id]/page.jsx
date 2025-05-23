@@ -47,7 +47,7 @@ export default async function Page({ params, searchParams }) {
           <h1 className="text-3xl font-bold text-center">
             {productData.title}
           </h1>
-
+          <p className="text-lg text-gray-600">{productData.description}</p>
           <div className="flex justify-center rounded-lg p-4">
             <Image
               src={productData.image}
@@ -92,7 +92,8 @@ export default async function Page({ params, searchParams }) {
 
           {/* Right Side - Content */}
           <div className="w-1/2 flex flex-col space-y-4">
-            <h1 className="text-3xl font-bold">{productData.title}</h1>
+            <h1 className="text-3xl font-bold"> {productData.title}</h1>
+            <p className="text-sm text-gray-600">{productData.category}</p>
 
             <div>
               <p className="text-lg text-gray-600">{productData.description}</p>
