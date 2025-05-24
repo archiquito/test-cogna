@@ -10,7 +10,6 @@ Este é um projeto de teste técnico desenvolvido com Next.js, React e Tailwind 
 - **Vitest**: Framework de testes unitários e de integração
 - **Testing Library**: Biblioteca para testes de componentes React
 - **ESLint**: Linter para manter a qualidade do código
-- **Playwright**: Framework para testes end-to-end
 
 ## Escolhas Técnicas
 
