@@ -1,12 +1,10 @@
-import React from "react";
+import React from 'react';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,
-} from "./ui/card";
-import { Skeleton } from "./ui/skeleton";
+} from './ui/card';
 
 export default function LoadingProducts() {
   return (

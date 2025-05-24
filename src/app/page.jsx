@@ -1,7 +1,7 @@
-import { ProductList } from "@/components/ProductList";
+import { ProductList } from '@/components/ProductList';
 
 export default async function Home() {
-  const res = await fetch("https://fakestoreapi.com/products");
+  const res = await fetch('https://fakestoreapi.com/products');
   const data = await res.json();
 
   // Get unique categories

@@ -1,23 +1,22 @@
-"use client";
+'use client';
 
-import React from "react";
-import { useState } from "react";
-import { Products } from "./Products";
-import { CategoryFilter } from "./CategoryFilter";
-import LoadingProducts from "./LoadingProducts";
-import { Suspense } from "react";
+import React, { useState, Suspense } from 'react';
+
+import { Products } from './Products';
+import { CategoryFilter } from './CategoryFilter';
+import LoadingProducts from './LoadingProducts';
 
 export function ProductList({ initialData, categories }) {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [selectedCategory, setSelectedCategory] = useState('all');
   const [products, setProducts] = useState(initialData);
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
-    if (category === "all") {
+    if (category === 'all') {
       setProducts(initialData);
     } else {
       const filteredProducts = initialData.filter(
-        (product) => product.category === category
+        (product) => product.category === category,
       );
       setProducts(filteredProducts);
     }

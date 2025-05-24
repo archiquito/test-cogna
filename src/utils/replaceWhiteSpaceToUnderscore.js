@@ -1,3 +1,3 @@
 export function replaceWhiteSpaceToUnderscore(str) {
-  return str.replace(/\s+/g, "_");
+  return str.replace(/\s+/g, '_');
 }

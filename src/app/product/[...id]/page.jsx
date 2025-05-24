@@ -1,20 +1,20 @@
-import { Button } from "@/components/ui/button";
-import { formatPrice } from "@/utils/formatPrice";
-import { ShoppingCart, ArrowLeft } from "lucide-react";
-import { ProductSkeleton } from "@/components/ProductSkeleton";
-import { Suspense } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import { Button } from '@/components/ui/button';
+import { formatPrice } from '@/utils/formatPrice';
+import { ShoppingCart, ArrowLeft } from 'lucide-react';
+import { ProductSkeleton } from '@/components/ProductSkeleton';
+import { Suspense } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
-export async function generateMetadata({ params, searchParams }, parent) {
+export async function generateMetadata({ params }, parent) {
   // read route params
   const {
-    id: [id, title],
+    id: [id],
   } = await params;
 
   // fetch data
   const product = await fetch(`https://fakestoreapi.com/products/${id}`).then(
-    (res) => res.json()
+    (res) => res.json(),
   );
 
   // optionally access and extend (rather than replace) parent metadata
@@ -30,7 +30,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 
 async function getProduct(id) {
   const res = await fetch(`https://fakestoreapi.com/products/${id}`);
-  return await res.json();
+  return res.json();
 }
 
 function ProductContent({ productData }) {
@@ -59,11 +59,15 @@ function ProductContent({ productData }) {
             {formatPrice(productData.price)}
           </p>
           <Button className="bg-emerald-600 hover:bg-emerald-700 text-xl px-8 py-6 w-full">
-            <ShoppingCart className="size-6 mr-2" /> Comprar
+            <ShoppingCart className="size-6 mr-2" />
+            {' '}
+            Comprar
           </Button>
           <Button asChild variant="outline" className="mt-4">
             <Link href="/">
-              <ArrowLeft className="mr-2 h-4 w-4" /> Voltar
+              <ArrowLeft className="mr-2 h-4 w-4" />
+              {' '}
+              Voltar
             </Link>
           </Button>
         </div>
@@ -84,7 +88,10 @@ function ProductContent({ productData }) {
 
         {/* Right Side - Content */}
         <div className="w-1/2 flex flex-col space-y-4">
-          <h1 className="text-3xl font-bold"> {productData.title}</h1>
+          <h1 className="text-3xl font-bold">
+            {' '}
+            {productData.title}
+          </h1>
           <p className="text-sm text-gray-600">{productData.category}</p>
 
           <div>
@@ -96,14 +103,18 @@ function ProductContent({ productData }) {
               {formatPrice(productData.price)}
             </p>
             <Button className="bg-emerald-600 hover:bg-emerald-700 text-xl px-8 py-6">
-              <ShoppingCart className="size-6 mr-2" /> Comprar
+              <ShoppingCart className="size-6 mr-2" />
+              {' '}
+              Comprar
             </Button>
           </div>
 
           <div className="mt-auto">
             <Button asChild variant="outline" className="self-start">
               <Link href="/">
-                <ArrowLeft className="mr-2 h-4 w-4" /> Voltar
+                <ArrowLeft className="mr-2 h-4 w-4" />
+                {' '}
+                Voltar
               </Link>
             </Button>
           </div>
@@ -113,7 +124,7 @@ function ProductContent({ productData }) {
   );
 }
 
-export default async function Page({ params, searchParams }) {
+export default async function Page({ params }) {
   const {
     id: [id],
   } = await params;
