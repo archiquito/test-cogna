@@ -71,7 +71,7 @@ src/
   │   ├── ui/          # Componentes de UI base
   │   └── ...          # Componentes específicos
   ├── test/            # Configurações de teste
-  └── __tests__/       # Testes unitários e de integração
+  └── __tests__/       # Testes de integração
 ```
 
 ## Convenções de Código
