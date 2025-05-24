@@ -15,6 +15,14 @@ export const metadata = {
   keywords: ["Next.js", "React", "JavaScript"],
   publisher: "Cogna",
   creator: "André Chiquito",
+  icons: {
+    icon: [
+      {
+        url: "/store.svg", // /public path
+        href: "/store.svg", // /public path
+      },
+    ],
+  },
 };
 
 export default function RootLayout({ children }) {
