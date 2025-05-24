@@ -1,3 +1,4 @@
+import React from "react";
 import { Suspense } from "react";
 import { Button } from "./ui/button";
 import {
@@ -10,18 +11,22 @@ import {
 } from "./ui/card";
 
 import Link from "next/link";
-import LoadingProducts from "./LoadingProducts";
+import LoadingProducts from "./LoadingProducts.jsx";
 import Image from "next/image";
 import { formatPrice } from "@/utils/formatPrice";
 import { replaceWhiteSpaceToUnderscore } from "@/utils/replaceWhiteSpaceToUnderscore";
 import { ShoppingCart } from "lucide-react";
 
 export function Products({ data }) {
+  console.log("Products data:", data); // Debug log
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
-        {data.map((item) => (
-          <Card key={item.id} className="w-[350px] border-accent border-2">
+      <div
+        data-testid="products-grid"
+        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4"
+      >
+        {data?.map((item) => (
+          <article key={item.id} className="w-[350px] border-accent border-2">
             <CardHeader>
               <CardContent className="grid-cols-2 gap-2.5 flex items-center justify-center">
                 <div className="flex items-center justify-center h-[150px]">
@@ -54,7 +59,7 @@ export function Products({ data }) {
                 </Link>
               </Button>
             </CardFooter>
-          </Card>
+          </article>
         ))}
       </div>
     </>

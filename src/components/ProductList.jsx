@@ -1,5 +1,6 @@
 "use client";
 
+import React from "react";
 import { useState } from "react";
 import { Products } from "./Products";
 import { CategoryFilter } from "./CategoryFilter";
