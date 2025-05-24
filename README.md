@@ -1,4 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Teste Cogna
+
+Este é um projeto de teste técnico desenvolvido com Next.js, React e Tailwind CSS.
+
+## Tecnologias Utilizadas
+
+- **Next.js 14**: Framework React com suporte a SSR e rotas dinâmicas
+- **React**: Biblioteca para construção de interfaces
+- **Tailwind CSS**: Framework CSS utilitário para estilização
+- **Vitest**: Framework de testes unitários e de integração
+- **Testing Library**: Biblioteca para testes de componentes React
+- **ESLint**: Linter para manter a qualidade do código
+- **Playwright**: Framework para testes end-to-end
+
+## Escolhas Técnicas
+
+### Next.js
+
+- Escolhido por sua performance, SEO e facilidade de desenvolvimento
+- Suporte nativo a SSR (Server Side Rendering)
+- Sistema de rotas dinâmicas para páginas de produtos
+- Otimização automática de imagens
+
+### Tailwind CSS
+
+- Desenvolvimento mais rápido com classes utilitárias
+- Menor tamanho de bundle final
+- Fácil customização e manutenção
+- Suporte a temas e modo escuro
+
+### Vitest + Testing Library
+
+- Vitest: Mais rápido que Jest e melhor integração com Vite
+- Testing Library: Foco em testar comportamentos do usuário
+- Suporte a testes unitários e de integração
+- Configuração simplificada
+
+## Como Executar
+
+1. Instale as dependências:
+
+```bash
+npm install
+```
+
+2. Execute o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+3. Acesse [http://localhost:3000](http://localhost:3000)
+
+## Scripts Disponíveis
+
+- `npm run dev`: Inicia o servidor de desenvolvimento
+- `npm run build`: Cria a build de produção
+- `npm run start`: Inicia o servidor de produção
+- `npm run lint`: Executa o ESLint
+- `npm run lint:fix`: Corrige problemas do ESLint automaticamente
+- `npm run test:unit`: Executa testes unitários
+- `npm run test:unit:watch`: Executa testes unitários em modo watch
+- `npm run test:integration`: Executa testes de integração
+- `npm run test:integration:watch`: Executa testes de integração em modo watch
+
+## Estrutura do Projeto
+
+```
+src/
+  ├── app/              # Páginas e layouts do Next.js
+  ├── components/       # Componentes React reutilizáveis
+  │   ├── ui/          # Componentes de UI base
+  │   └── ...          # Componentes específicos
+  ├── test/            # Configurações de teste
+  └── __tests__/       # Testes unitários e de integração
+```
+
+## Convenções de Código
+
+- ESLint configurado com regras do Airbnb
+- Preferência por componentes funcionais
+- Testes para componentes críticos
+- Commits seguindo Conventional Commits
 
 ## Getting Started
 
